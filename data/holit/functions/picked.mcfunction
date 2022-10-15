@@ -8,7 +8,7 @@ execute if entity @s[nbt={SelectedItem:{id:"minecraft:stone_pickaxe"}}] run loot
 execute if entity @s[nbt={SelectedItem:{id:"minecraft:iron_pickaxe"}}] run loot replace entity @s weapon.mainhand loot holit:iron
 execute if entity @s[nbt={SelectedItem:{id:"minecraft:golden_pickaxe"}}] run loot replace entity @s weapon.mainhand loot holit:gold
 execute if entity @s[nbt={SelectedItem:{id:"minecraft:diamond_pickaxe"}}] run loot replace entity @s weapon.mainhand loot holit:diamond
-execute if entity @s[nbt={SelectedItem:{id:"minecraft:netherite_pickaxe"}}] run loot replace entity @s weapon.mainhand loot holit:netherite
+execute if entity @s[nbt={SelectedItem:{id:"minecraft:netherite_pickaxe"}}] if entity @s[nbt=!{SelectedItem:{id:"minecraft:netherite_pickaxe",tag:{neo:1b}}}] run loot replace entity @s weapon.mainhand loot holit:netherite
 execute if entity @s[nbt={SelectedItem:{id:"minecraft:netherite_pickaxe",tag:{neo:1b}}}] run loot replace entity @s weapon.mainhand loot holit:neo_netherite
 
 

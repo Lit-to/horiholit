@@ -1,6 +1,6 @@
 #> holit:game/point
 scoreboard players operation @s point += amount point
-
+function holit:game/level
 execute if score @s level matches 0 run data modify storage xper: max set from storage holit: frequency[0]
 execute if score @s level matches 1 run data modify storage xper: max set from storage holit: frequency[1]
 execute if score @s level matches 2 run data modify storage xper: max set from storage holit: frequency[2]
@@ -11,12 +11,10 @@ execute if score @s level matches 6 run data modify storage xper: max set from s
 execute if score @s level matches 7 run data modify storage xper: max set from storage holit: frequency[7]
 execute if score @s level matches 8 run data modify storage xper: max set from storage holit: frequency[8]
 execute if score @s level matches 9 run data modify storage xper: max set from storage holit: frequency[9]
-execute store result score max point run data get storage xper: max 1
-execute if score max point <= @s point if score @s level matches ..8 run function holit:game/level
-scoreboard players reset max point
+
 execute store result storage xper: value int 1 run scoreboard players get @s point 
 function xper: 
-#execute if score @s point matches 1.. run function holit:game/point/rank
+scoreboard players reset max point
 scoreboard players reset amount point
 
 
