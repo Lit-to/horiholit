@@ -1,0 +1,6 @@
+{
+    "criteria": {},
+    "rewards": {
+        "function": "holit:login"
+    }
+}

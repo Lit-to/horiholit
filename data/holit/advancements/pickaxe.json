@@ -1,0 +1,21 @@
+{
+  "criteria": {
+    "block_1": {
+      "trigger": "minecraft:item_durability_changed",
+      "conditions": {
+        "item": {
+          "tag": "holit:pickaxe",
+          "enchantments": [
+            {
+              "enchantment": "minecraft:silk_touch",
+              "levels": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "holit:picked"
+  }
+}
