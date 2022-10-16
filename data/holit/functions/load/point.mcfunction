@@ -52,7 +52,7 @@ data modify storage holit: point append value 300
 data modify storage holit: point append value 800
 data modify storage holit: point append value 1000
 data modify storage holit: point append value 1000
-data modify storage holit: point append value 800
+data modify storage holit: point append value 795
 data modify storage holit: point append value 1000
 data modify storage holit: point append value 1000
 
