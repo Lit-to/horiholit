@@ -31,3 +31,6 @@ scoreboard players operation minute time %= 60 time
 scoreboard players operation hour time /= 60 time 
 #タイマー
 execute as @a run function holit:game/point/rank
+
+say a
+
