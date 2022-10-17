@@ -38,9 +38,9 @@ execute if score 5 point <= @s point if score @s point < 6 point run scoreboard 
 execute if score 6 point <= @s point if score @s point < 7 point run loot replace entity @s weapon.mainhand loot holit:gold
 execute if score 6 point <= @s point if score @s point < 7 point run scoreboard players set @s level 7
 #エンドに移動
-execute if score 7 point <= @s point if score @s point < 8 point if entity @s[predicate=holit:nether] in overworld run tp @s @e[type=armor_stand,tag=end,sort=nearest,limit=1]
-execute if score 7 point <= @s point if score @s point < 8 point if entity @s[predicate=holit:nether] in overworld in overworld at @e[type=armor_stand,tag=end,sort=nearest,limit=1] run spawnpoint @s ~ ~ ~
 execute if score 7 point <= @s point if score @s point < 8 point if entity @s[predicate=holit:nether] run give @s purpur_block 128
+execute if score 7 point <= @s point if score @s point < 8 point if entity @s[predicate=holit:nether] in overworld at @e[type=armor_stand,tag=end,sort=nearest,limit=1] run spawnpoint @s ~ ~ ~
+execute if score 7 point <= @s point if score @s point < 8 point if entity @s[predicate=holit:nether] in overworld run tp @s @e[type=armor_stand,tag=end,sort=nearest,limit=1]
 execute if score 7 point <= @s point if score @s point < 8 point run loot replace entity @s weapon.mainhand loot holit:netherite
 execute if score 7 point <= @s point if score @s point < 8 point run scoreboard players set @s level 8
 execute if score 8 point <= @s point if score @s point < 9 point run loot replace entity @s weapon.mainhand loot holit:neo_netherite
