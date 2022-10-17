@@ -2,7 +2,8 @@
 execute as @e[type=item] run data modify entity @s PickupDelay set value 0s
 #execute as @e[type=item,nbt=!{Age:0s}] run kill @s 
 execute as @a if score @s death matches 1.. run function holit:death/main
-clear @a[gamemode=!spectator] #holit:all
+clear @a[gamemode=!spectator,gamemode=!creative] #holit:all
+#clear @a[gamemode=!creative] #holit:all
 
 execute as @a if score @s adv matches 2 run function holit:game/check
 execute as @a if score @s adv matches 1.. run scoreboard players set @s adv 2

@@ -20,4 +20,4 @@ execute as @a at @s run playsound entity.firework_rocket.launch master @s ~ ~ ~ 
 #途中参加処理ファンクションを入れる
 execute as @a at @s run function holit:game/join
 bossbar set holit: players @a
-
+scoreboard objectives setdisplay sidebar.team.yellow point

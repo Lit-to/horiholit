@@ -41,7 +41,7 @@ scoreboard players set point min_deep_diamond_ore 101
 # ネザーそのほか
 scoreboard players set point min_nether_quartz 80
 scoreboard players set point min_ancient_debris 100
-scoreboard players set point min_end_stone 10
+scoreboard players set point min_obsidian 10
 
 #########################
 #点数上から順にレベル

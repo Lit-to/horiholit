@@ -1,6 +1,7 @@
 #> holit:game/level/clear
 
 gamemode spectator @s 
+team join sp @s
 summon firework_rocket
 loot replace entity @s weapon.mainhand loot holit:head
 data modify storage holit: result.temp set from entity @s SelectedItem.tag.SkullOwner.Name

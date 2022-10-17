@@ -39,7 +39,7 @@
     execute if score @s min_nether_quartz matches 1.. run scoreboard players operation amount point += point min_nether_quartz
     execute if score @s min_netherrack matches 1.. run scoreboard players operation amount point += point min_netherrack
     execute if score @s min_ancient_debris matches 1.. run scoreboard players operation amount point += point min_ancient_debris
-    execute if score @s min_end_stone matches 1.. run scoreboard players operation amount point += point min_end_stone
+    execute if score @s min_obsidian matches 1.. run scoreboard players operation amount point += point min_obsidian
 
 #カウント
     execute if score @s min_oak matches 1.. run function holit:game/count/0_wood
@@ -82,7 +82,7 @@
     execute if score @s min_nether_quartz matches 1.. run function holit:game/count/23_quartz
     execute if score @s min_netherrack matches 1.. run function holit:game/count/21_netherrack
     execute if score @s min_ancient_debris matches 1.. run function holit:game/count/25_netherite
-    execute if score @s min_end_stone matches 1.. run function holit:game/count/26_end_stone
+    execute if score @s min_obsidian matches 1.. run function holit:game/count/26_obsidian
 
 # リセット
         # 木
@@ -126,7 +126,7 @@
     execute if score @s min_nether_quartz matches 1.. run scoreboard players reset @s min_nether_quartz
     execute if score @s min_netherrack matches 1.. run scoreboard players reset @s min_netherrack
     execute if score @s min_ancient_debris matches 1.. run scoreboard players reset @s min_ancient_debris
-    execute if score @s min_end_stone matches 1.. run scoreboard players reset @s min_end_stone
+    execute if score @s min_obsidian matches 1.. run scoreboard players reset @s min_obsidian
 
 #ポイント反映
 function holit:game/point

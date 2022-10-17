@@ -35,7 +35,10 @@ execute if score 5 point <= @s point if score @s point < 6 point if entity @s[pr
 execute if score 5 point <= @s point if score @s point < 6 point if entity @s[predicate=holit:overworld] in overworld at @e[type=armor_stand,tag=nether,sort=nearest,limit=1] run spawnpoint @s ~ ~ ~
 execute if score 5 point <= @s point if score @s point < 6 point run loot replace entity @s weapon.mainhand loot holit:diamond
 execute if score 5 point <= @s point if score @s point < 6 point run scoreboard players set @s level 6
+execute if score 5 point <= @s point if score @s point < 6 point in overworld at @e[type=armor_stand,tag=nether,sort=nearest,limit=1] run spawnpoint @s ~ ~ ~
+
 execute if score 6 point <= @s point if score @s point < 7 point run loot replace entity @s weapon.mainhand loot holit:gold
+execute if score 6 point <= @s point if score @s point < 7 point in overworld at @e[type=armor_stand,tag=nether,sort=nearest,limit=1] run spawnpoint @s ~ ~ ~
 execute if score 6 point <= @s point if score @s point < 7 point run scoreboard players set @s level 7
 #エンドに移動
 execute if score 7 point <= @s point if score @s point < 8 point if entity @s[predicate=holit:nether] run give @s purpur_block 128
@@ -49,12 +52,13 @@ execute if score 9 point <= @s point run function holit:game/level/clear
 
 
 execute if score @s level matches ..9 if score pre level < @s level run tellraw @a [{"selector":"@s"},{"text": "が"},{"score":{"name": "@s","objective": "level"}},{"text": "レベルに到達した。"}]
+execute if score @s level matches ..9 if score pre level < @s level run execute at @s run playsound entity.player.levelup master @s ~ ~ ~
 execute if score @s level matches ..9 if score @s level < pre level run tellraw @a [{"selector":"@s"},{"text": "が"},{"score":{"name": "@s","objective": "level"}},{"text": "レベルにダウンした。"}]
 scoreboard players reset max level 
 scoreboard players reset pre level
 scoreboard players set amount point 0
 scoreboard players reset amount point 
-execute at @s run playsound entity.player.levelup master @s ~ ~ ~
+
 scoreboard players reset 0 point
 scoreboard players reset 1 point
 scoreboard players reset 2 point

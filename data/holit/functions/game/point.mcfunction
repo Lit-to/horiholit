@@ -1,5 +1,6 @@
 #> holit:game/point
 scoreboard players operation @s point += amount point
+execute if score amount point matches 1.. at @s run playsound entity.experience_orb.pickup master @s ~ ~ ~ 
 function holit:game/level
 execute if score @s level matches 0 run data modify storage xper: max set from storage holit: frequency[0]
 execute if score @s level matches 1 run data modify storage xper: max set from storage holit: frequency[1]
