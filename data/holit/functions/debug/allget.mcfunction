@@ -35,4 +35,4 @@ scoreboard players set @s min_deep_emerald_ore 1
 scoreboard players set @s min_netherrack 1
 scoreboard players set @s min_nether_quartz 1
 scoreboard players set @s min_ancient_debris 1
-scoreboard players set @s min_end_stone 1
+scoreboard players set @s min_obsidian 1

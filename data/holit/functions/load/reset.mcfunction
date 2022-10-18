@@ -48,7 +48,7 @@ scoreboard objectives remove min_deep_emerald_ore
 scoreboard objectives remove min_netherrack 
 scoreboard objectives remove min_nether_quartz
 scoreboard objectives remove min_ancient_debris
-scoreboard objectives remove min_end_stone
+scoreboard objectives remove min_obsidian
 # 作成
 # 木
 scoreboard objectives add min_oak mined:oak_log
@@ -92,7 +92,7 @@ scoreboard objectives add min_deep_diamond_ore mined:deepslate_diamond_ore
 scoreboard objectives add min_ancient_debris mined:ancient_debris
 scoreboard objectives add min_deep_emerald_ore mined:deepslate_emerald_ore
 scoreboard objectives add min_emerald_ore mined:emerald_ore
-scoreboard objectives add min_end_stone mined:end_stone
+scoreboard objectives add min_obsidian mined:obsidian
 
 # ポイント管理 本当はstorageで管理すべきなんだろうけど、分かりやすさからスコアで
 # プレイヤー用
@@ -140,7 +140,7 @@ scoreboard players set point min_deep_diamond_ore 101
 # ネザーそのほか
 scoreboard players set point min_nether_quartz 80
 scoreboard players set point min_ancient_debris 100
-scoreboard players set point min_end_stone 10
+scoreboard players set point min_obsidian 50
 
 
 ###################################
@@ -219,4 +219,6 @@ execute in the_end run difficulty peaceful
 gamerule spawnRadius 0
 gamerule sendCommandFeedback false
 
+team add sp 
+team modify sp color yellow
 
