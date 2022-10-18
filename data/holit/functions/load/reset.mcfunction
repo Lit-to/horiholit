@@ -236,3 +236,11 @@ gamerule sendCommandFeedback false
 team add sp 
 team modify sp color yellow
 
+#範囲規定
+#gamemode survival @s
+setworldspawn ~ ~ ~ 
+worldborder center ~ ~ 
+worldborder set 2000
+execute unless entity @e[type=armor_stand,tag=inst] positioned ~ 300 ~ run function holit:start/positioned
+
+
