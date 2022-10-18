@@ -15,7 +15,6 @@ execute if score @s level matches 9 run data modify storage xper: max set from s
 
 execute store result storage xper: value int 1 run scoreboard players get @s point 
 function xper: 
-scoreboard players reset max point
 scoreboard players reset amount point
 
 

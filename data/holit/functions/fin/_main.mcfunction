@@ -11,8 +11,7 @@ title @a title [{"text": "FINISH"}]
 execute as @a at @s run playsound entity.firework_rocket.launch master @s ~ ~ ~ 1 1 
 advancement revoke @a only holit:login
 bossbar remove holit:
-scoreboard objectives modify point displayname {"text": "結果ポイント"}
-execute store result score クリア者↑ point run data get storage holit: frequency[-1]
+
 scoreboard objectives setdisplay sidebar point
 gamemode spectator @a
 

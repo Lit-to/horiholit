@@ -97,7 +97,7 @@ scoreboard objectives add min_obsidian mined:obsidian
 # ポイント管理 本当はstorageで管理すべきなんだろうけど、分かりやすさからスコアで
 # プレイヤー用
 scoreboard objectives remove point
-scoreboard objectives add point dummy
+scoreboard objectives add point dummy {"text": "結果ポイント"}
 ########################################
 # アイテムポイント
 # 木
@@ -172,6 +172,7 @@ data modify storage holit: frequency set value [0]
 data modify storage holit: temp_p set from storage holit: point
 
 function holit:load/frequency
+execute store result score クリア者↑ point run data get storage holit: frequency[-1]
 
 #######
 data remove storage holit: temp_p 
@@ -199,6 +200,19 @@ scoreboard players set 20 time 20
 scoreboard players set 1200 time 1200
 scoreboard players set 60 time 60
 
+#計算用、pointだと正直やりづらかったので分離。個人スコアは格納しない
+scoreboard objectives remove calc
+scoreboard objectives add calc dummy
+    execute store result score 0 calc run data get storage holit: frequency[0]
+    execute store result score 1 calc run data get storage holit: frequency[1]
+    execute store result score 2 calc run data get storage holit: frequency[2]
+    execute store result score 3 calc run data get storage holit: frequency[3]
+    execute store result score 4 calc run data get storage holit: frequency[4]
+    execute store result score 5 calc run data get storage holit: frequency[5]
+    execute store result score 6 calc run data get storage holit: frequency[6]
+    execute store result score 7 calc run data get storage holit: frequency[7]
+    execute store result score 8 calc run data get storage holit: frequency[8]
+    execute store result score 9 calc run data get storage holit: frequency[9]
 
 #ゲームルール
 execute in overworld run gamerule keepInventory true
