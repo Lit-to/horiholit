@@ -130,6 +130,8 @@
 
 #ポイント反映
 execute if score amount point matches 1.. run function holit:game/point
+execute if score amount point matches ..0 at @s run playsound minecraft:block.note_block.didgeridoo master @s ~ ~ ~ 10 0.1
+
 scoreboard players reset @s adv
 
 

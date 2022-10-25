@@ -4,5 +4,7 @@ loot replace entity @e[type=armor_stand,tag=obs,predicate=holit:sneak] weapon.ma
 loot replace entity @e[type=armor_stand,tag=obs,predicate=!holit:sneak] weapon.mainhand loot holit:random20
 execute if entity @e[type=armor_stand,tag=obs,limit=1,nbt={ArmorItems:[{id:"minecraft:red_wool"}]}] run scoreboard players operation amount point += point min_obsidian
 execute if entity @e[type=armor_stand,tag=obs,limit=1,nbt={ArmorItems:[{id:"minecraft:blue_wool"}]}] run scoreboard players reset @s min_obsidian
+
+
 kill @e[type=armor_stand,tag=obs]
 
