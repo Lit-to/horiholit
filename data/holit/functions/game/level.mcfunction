@@ -42,7 +42,7 @@ execute if score 9 calc <= @s point run function holit:game/level/clear
 
 
 execute if score @s level matches ..9 if score pre level < @s level run tellraw @a [{"selector":"@s"},{"text": "が"},{"score":{"name": "@s","objective": "level"}},{"text": "レベルに到達した。"}]
-execute if score @s level matches ..9 if score pre level < @s level run execute at @s run playsound entity.player.levelup master @s ~ ~ ~
+execute if score @s level matches ..9 if score pre level < @s level at @s run playsound entity.player.levelup master @s ~ ~ ~
 execute if score @s level matches ..9 if score @s level < pre level run tellraw @a [{"selector":"@s"},{"text": "が"},{"score":{"name": "@s","objective": "level"}},{"text": "レベルにダウンした。"}]
 scoreboard players reset max level 
 scoreboard players reset pre level
