@@ -8,7 +8,6 @@ clear @a[gamemode=!spectator,gamemode=!creative] #holit:all
 execute as @a if score @s adv matches 2 run function holit:game/check
 execute as @a if score @s adv matches 1.. run scoreboard players set @s adv 2
 
-#ボスバー
 
 effect give @a night_vision 100000 255 true
 effect give @a water_breathing 1000000 255 true
@@ -33,5 +32,5 @@ scoreboard players operation hour time /= 60 time
 #タイマー
 execute as @a run function holit:game/point/rank
 
-say a
+
 
