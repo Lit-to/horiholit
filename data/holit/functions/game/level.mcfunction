@@ -23,13 +23,13 @@ execute if score @s point < 5 calc at @s if entity @e[type=armor_stand,distance=
 #ネザーに移動
 execute if score 5 calc <= @s point if score @s point < 7 calc if entity @s[predicate=holit:overworld] in overworld run tp @s @e[type=armor_stand,tag=nether,sort=nearest,limit=1]
 execute if score 5 calc <= @s point if score @s point < 7 calc if entity @s[predicate=holit:overworld] in overworld at @e[type=armor_stand,tag=nether,sort=nearest,limit=1] run spawnpoint @s ~ ~ ~
-execute if score 5 calc <= @s point if score @s point < 7 calc run loot replace entity @s weapon.mainhand loot holit:diamond
-execute if score 5 calc <= @s point if score @s point < 7 calc run scoreboard players set @s level 6
-execute if score 5 calc <= @s point if score @s point < 7 calc in overworld at @e[type=armor_stand,tag=nether,sort=nearest,limit=1] run spawnpoint @s ~ ~ ~
+execute if score 5 calc <= @s point if score @s point < 6 calc run loot replace entity @s weapon.mainhand loot holit:diamond
+execute if score 5 calc <= @s point if score @s point < 6 calc run scoreboard players set @s level 6
+execute if score 5 calc <= @s point if score @s point < 6 calc in overworld at @e[type=armor_stand,tag=nether,sort=nearest,limit=1] run spawnpoint @s ~ ~ ~
 
-execute if score 7 calc <= @s point if score @s point < 7 calc run loot replace entity @s weapon.mainhand loot holit:gold
-execute if score 7 calc <= @s point if score @s point < 7 calc in overworld at @e[type=armor_stand,tag=nether,sort=nearest,limit=1] run spawnpoint @s ~ ~ ~
-execute if score 7 calc <= @s point if score @s point < 7 calc run scoreboard players set @s level 7
+execute if score 6 calc <= @s point if score @s point < 7 calc run loot replace entity @s weapon.mainhand loot holit:gold
+execute if score 6 calc <= @s point if score @s point < 7 calc in overworld at @e[type=armor_stand,tag=nether,sort=nearest,limit=1] run spawnpoint @s ~ ~ ~
+execute if score 6 calc <= @s point if score @s point < 7 calc run scoreboard players set @s level 7
 #エンドに移動
 execute if score 7 calc <= @s point if score @s point < 8 calc if entity @s[predicate=holit:nether] run loot give @s loot holit:move/_first
 execute if score 7 calc <= @s point if score @s point < 8 calc if entity @s[predicate=holit:nether] in overworld at @e[type=armor_stand,tag=end,sort=nearest,limit=1] run spawnpoint @s ~ ~ ~

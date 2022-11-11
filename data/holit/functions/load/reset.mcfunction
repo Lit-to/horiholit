@@ -141,6 +141,7 @@ scoreboard players set point min_diamond_ore 60
 scoreboard players set point min_deep_coal_ore 11
 scoreboard players set point min_deep_iron_ore 16
 scoreboard players set point min_deep_gold_ore 11
+scoreboard players set point min_deep_copper_ore 11
 scoreboard players set point min_deep_rs_ore 21
 scoreboard players set point min_deep_lp_ore 21
 scoreboard players set point min_deep_emerald_ore 61

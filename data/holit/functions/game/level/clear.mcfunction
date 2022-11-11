@@ -1,5 +1,5 @@
 #> holit:game/level/clear
-
+tellraw @a [{"selector":"@s","color": "gold"},{"text": "がクリアした！","color": "gold"}]
 gamemode spectator @s 
 team join sp @s
 summon firework_rocket
