@@ -25,7 +25,6 @@ scoreboard objectives remove min_granite
 scoreboard objectives remove min_deeps
 scoreboard objectives remove min_tuff
 scoreboard objectives remove min_basalt
-scoreboard objectives remove min_mossy
 # 鉱石シリーズ
 scoreboard objectives remove min_coal_ore
 scoreboard objectives remove min_iron_ore
@@ -49,6 +48,8 @@ scoreboard objectives remove min_netherrack
 scoreboard objectives remove min_nether_quartz
 scoreboard objectives remove min_ancient_debris
 scoreboard objectives remove min_obsidian
+scoreboard objectives remove min_chorus_plant 
+scoreboard objectives remove min_chorus_flower
 # 作成
 # 木
 scoreboard objectives add min_oak mined:oak_log
@@ -67,7 +68,6 @@ scoreboard objectives add min_granite mined:granite
 scoreboard objectives add min_tuff mined:tuff
 scoreboard objectives add min_basalt mined:basalt
 scoreboard objectives add min_deeps mined:deepslate
-scoreboard objectives add min_mossy mined:mossy_cobblestone
 
 # 鉱石シリーズ
 scoreboard objectives add min_coal_ore mined:coal_ore
@@ -93,6 +93,15 @@ scoreboard objectives add min_ancient_debris mined:ancient_debris
 scoreboard objectives add min_deep_emerald_ore mined:deepslate_emerald_ore
 scoreboard objectives add min_emerald_ore mined:emerald_ore
 scoreboard objectives add min_obsidian mined:obsidian
+scoreboard objectives add min_chorus_plant mined:chorus_plant
+scoreboard objectives add min_chorus_flower mined:chorus_flower
+
+#エンドストーン
+scoreboard objectives remove min_end_stone
+scoreboard objectives add min_end_stone mined:end_stone
+
+#統計用
+function holit:load/stats
 
 # ポイント管理 本当はstorageで管理すべきなんだろうけど、分かりやすさからスコアで
 # プレイヤー用
@@ -118,7 +127,6 @@ scoreboard players set point min_diorite 2
 scoreboard players set point min_granite 2
 scoreboard players set point min_tuff 2
 scoreboard players set point min_basalt 2
-scoreboard players set point min_mossy 30
 # 鉱石シリーズ
 scoreboard players set point min_coal_ore 10
 scoreboard players set point min_iron_ore 15
@@ -127,8 +135,8 @@ scoreboard players set point min_nether_gold_ore 12
 scoreboard players set point min_copper_ore 10
 scoreboard players set point min_rs_ore 20
 scoreboard players set point min_lp_ore 20
-scoreboard players set point min_emerald_ore 60
-scoreboard players set point min_diamond_ore 100
+scoreboard players set point min_emerald_ore 100
+scoreboard players set point min_diamond_ore 60
 #
 scoreboard players set point min_deep_coal_ore 11
 scoreboard players set point min_deep_iron_ore 16
@@ -140,8 +148,9 @@ scoreboard players set point min_deep_diamond_ore 101
 # ネザーそのほか
 scoreboard players set point min_nether_quartz 80
 scoreboard players set point min_ancient_debris 100
-scoreboard players set point min_obsidian 50
-
+scoreboard players set point min_obsidian 25
+scoreboard players set point min_chorus_plant 20
+scoreboard players set point min_chorus_flower 40
 
 ###################################
 # レベル変化ポイント(storage管理)
@@ -170,6 +179,7 @@ function holit:load/point
 
 data modify storage holit: frequency set value [0]
 data modify storage holit: temp_p set from storage holit: point
+
 
 function holit:load/frequency
 execute store result score クリア者↑ point run data get storage holit: frequency[-1]
@@ -242,5 +252,7 @@ setworldspawn ~ ~ ~
 worldborder center ~ ~ 
 worldborder set 2000
 execute unless entity @e[type=armor_stand,tag=inst] positioned ~ 300 ~ run function holit:start/positioned
-
-
+data modify storage holit: status set value -1b
+data modify storage holit: gate set value 0b
+tellraw @s [{"text": "リセットしました！"}]
+function holit:start/tell

@@ -14,7 +14,6 @@ scoreboard players set @s min_granite 1
 scoreboard players set @s min_deeps 1
 scoreboard players set @s min_tuff 1
 scoreboard players set @s min_basalt 1
-scoreboard players set @s min_mossy 1
 scoreboard players set @s min_coal_ore 1
 scoreboard players set @s min_iron_ore 1
 scoreboard players set @s min_gold_ore 1

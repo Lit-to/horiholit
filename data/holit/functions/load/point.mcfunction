@@ -19,7 +19,6 @@ scoreboard players set point min_diorite 2
 scoreboard players set point min_granite 2
 scoreboard players set point min_tuff 2
 scoreboard players set point min_basalt 2
-scoreboard players set point min_mossy 30
 # 鉱石シリーズ
 scoreboard players set point min_coal_ore 10
 scoreboard players set point min_iron_ore 15

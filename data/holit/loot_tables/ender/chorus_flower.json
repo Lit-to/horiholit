@@ -6,7 +6,7 @@
                 {
                     "type": "item",
                     "weight": 1,
-                    "name": "minecraft:granite",
+                    "name": "minecraft:chorus_flower",
                     "functions": [
                         {
                             "function": "set_count",
@@ -20,7 +20,7 @@
                             "function": "set_name",
                             "name": [
                                 {
-                                    "text": "火成岩(花崗岩/閃緑岩/凝灰岩/安山岩/玄武岩)"
+                                    "text": "コーラスフラワー"
                                 }
                             ]
                         }

@@ -31,18 +31,21 @@ execute if score 7 calc <= @s point if score @s point < 7 calc run loot replace 
 execute if score 7 calc <= @s point if score @s point < 7 calc in overworld at @e[type=armor_stand,tag=nether,sort=nearest,limit=1] run spawnpoint @s ~ ~ ~
 execute if score 7 calc <= @s point if score @s point < 7 calc run scoreboard players set @s level 7
 #エンドに移動
-execute if score 7 calc <= @s point if score @s point < 8 calc if entity @s[predicate=holit:nether] run give @s purpur_block 128
+execute if score 7 calc <= @s point if score @s point < 8 calc if entity @s[predicate=holit:nether] run loot give @s loot holit:move/_first
 execute if score 7 calc <= @s point if score @s point < 8 calc if entity @s[predicate=holit:nether] in overworld at @e[type=armor_stand,tag=end,sort=nearest,limit=1] run spawnpoint @s ~ ~ ~
 execute if score 7 calc <= @s point if score @s point < 8 calc if entity @s[predicate=holit:nether] in overworld run tp @s @e[type=armor_stand,tag=end,sort=nearest,limit=1]
 execute if score 7 calc <= @s point if score @s point < 8 calc run loot replace entity @s weapon.mainhand loot holit:netherite
 execute if score 7 calc <= @s point if score @s point < 8 calc run scoreboard players set @s level 8
 execute if score 8 calc <= @s point if score @s point < 9 calc run loot replace entity @s weapon.mainhand loot holit:neo_netherite
+execute if score 8 calc <= @s point if score @s point < 9 calc if data storage holit: {gate:0b} run function holit:game/gate
 execute if score 8 calc <= @s point if score @s point < 9 calc run scoreboard players set @s level 9
 execute if score 9 calc <= @s point run function holit:game/level/clear
 
 
+execute if score @s level matches ..9 if score pre level < @s level run function holit:game/xp/level
 execute if score @s level matches ..9 if score pre level < @s level run tellraw @a [{"selector":"@s"},{"text": "が"},{"score":{"name": "@s","objective": "level"}},{"text": "レベルに到達した。"}]
 execute if score @s level matches ..9 if score pre level < @s level at @s run playsound entity.player.levelup master @s ~ ~ ~
+execute if score @s level matches ..9 if score @s level < pre level run function holit:game/xp/level
 execute if score @s level matches ..9 if score @s level < pre level run tellraw @a [{"selector":"@s"},{"text": "が"},{"score":{"name": "@s","objective": "level"}},{"text": "レベルにダウンした。"}]
 scoreboard players reset max level 
 scoreboard players reset pre level

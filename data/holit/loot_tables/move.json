@@ -1,0 +1,42 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "weight": 70,
+                    "name": "holit:move/air",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "loot_table",
+                    "weight": 15,
+                    "name": "holit:move/pearl",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": 3
+                        }
+                    ]
+                },
+                {
+                    "type": "loot_table",
+                    "weight": 15,
+                    "name": "holit:move/purpur",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": 10
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
