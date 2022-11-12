@@ -15,6 +15,5 @@ data modify storage holit: result.temp set from entity @s SelectedItem.tag.Skull
 
 item replace entity @s weapon.mainhand with air
 function holit:game/level/enderchest
-
 function holit:game/level/tell
 

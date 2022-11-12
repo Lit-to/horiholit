@@ -1,0 +1,29 @@
+{
+    "pools": [
+        {
+            "rolls": 4,
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "weight": 1,
+                    "name": "holit:light/0"
+                },
+                {
+                    "type": "loot_table",
+                    "weight": 1,
+                    "name": "holit:light/0"
+                },
+                {
+                    "type": "loot_table",
+                    "weight": 1,
+                    "name": "holit:light/0"
+                },
+                {
+                    "type": "loot_table",
+                    "weight": 1,
+                    "name": "holit:light/0"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+{
+    "type": "empty",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "weight": 1,
+                    "name": "minecraft:barrier",
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": 1
+                        },
+                        {
+                            "function": "set_name",
+                            "name": [
+                                {
+                                    "text": "※5マス以内に人がいません※",
+                                    "color": "white",
+                                    "italic": false
+                                }
+                            ]
+                        },
+                        {
+                            "function": "set_lore",
+                            "lore": [
+                                [
+                                    {
+                                        "text": "5マス以内に誰かがいれば",
+                                        "color": "white",
+                                        "italic": false
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "掘ったアイテムリストを表示します。",
+                                        "color": "white",
+                                        "italic": false
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "レシピボタン",
+                                        "color": "green",
+                                        "italic": false,
+                                        "underlined": true
+                                    },
+                                    {
+                                        "text": "を押すと自分の掘った",
+                                        "color": "white",
+                                        "italic": false,
+                                        "underlined": false
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "アイテムリストに切り替えます。",
+                                        "color": "white",
+                                        "italic": false
+                                    }
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
